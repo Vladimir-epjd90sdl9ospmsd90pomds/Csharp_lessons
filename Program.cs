@@ -65,6 +65,8 @@
 // else if (num1 < num2) Console.Write("max = " + num2);
 // else Console.Write("Они равны");
 
+
+
 // // ДЗ. Задача 4
 // Console.Write("Введите первое число: ");
 // int num1 = Convert.ToInt32(Console.ReadLine());
@@ -78,9 +80,22 @@
 // Console.WriteLine("Наибольшее число: " + max);
 
 
-// ДЗ. Задача 6
-Console.Write("Введите первое число: ");
+
+// // ДЗ. Задача 6
+// Console.Write("Введите первое число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if (num == 0) Console.WriteLine("Введите число больше 0");
+// else if (num % 2 == 0) Console.WriteLine("Число чётное");
+// else Console.WriteLine("Число нечётное");
+
+
+
+// ДЗ. Задача 8
+Console.Write("Введите положительное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-if (num == 0) Console.WriteLine("Введите число больше 0");
-else if (num % 2 == 0) Console.WriteLine("Число чётное");
-else Console.WriteLine("Число нечётное");
+int result = 1;
+while (result <= num)
+{
+    if (result % 2 == 0) Console.Write(result + ", ");
+    result++;
+}
