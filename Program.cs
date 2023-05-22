@@ -90,12 +90,33 @@
 
 
 
-// ДЗ. Задача 8
-Console.Write("Введите положительное число: ");
+// // ДЗ. Задача 8
+// Console.Write("Введите положительное число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int result = 1;
+// while (result <= num)
+// {
+//     if (result % 2 == 0) Console.Write(result + ", ");
+//     result++;
+// }
+
+
+
+// ДЗ. Задача 7
+Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
-int result = 1;
-while (result <= num)
+int dec = 10;
+int count = 1;
+if (num < 0) num = num * (-1);
+int result = num;
+if (num < 100) Console.WriteLine("Число слишком маленькое, введите число длиннее 3-х разрядов");
+else
 {
-    if (result % 2 == 0) Console.Write(result + ", ");
-    result++;
+    while (result > 0)
+    {
+        result = result / dec;
+        count = count * 10;
+    }
+    Console.WriteLine((num / (count / 1000)) % 10);
 }
+
