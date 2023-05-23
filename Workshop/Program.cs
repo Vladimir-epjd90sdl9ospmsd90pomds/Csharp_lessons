@@ -102,7 +102,7 @@
 
 
 
-// ДЗ. Задача 7
+// // ДЗ. Задача 7
 Console.Write("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int dec = 10;
