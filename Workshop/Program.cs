@@ -190,33 +190,64 @@
 
 
 
-//ДЗ_2, Задача_Необязательная_2
-int prompt()
+// //ДЗ_2, Задача_Необязательная_2
+// int prompt()
+// {
+//     Console.WriteLine("Введите положительное количество студентов:");
+//     int data = Convert.ToInt32(Console.ReadLine());
+//     if (data >= 0) return data;
+//     else return prompt();
+// }
+// string wordEndForm(int num)
+// {
+//     if (num > 9)
+//     {
+//         if (num % 10 == 1) return "";
+//         else if (num % 10 >= 2 && num % 10 <= 4) return "а";
+//         else return "ов";
+//     }
+//     else
+//     {
+//         if (num == 1) return "";
+//         else if (num >= 2 && num <= 4) return "а";
+//         else return "ов";
+//     }
+// }
+// void wordForming(int num, string end)
+// {
+//     string answer = $"В аудитории {num} студент{end}";
+//     Console.WriteLine(answer);
+// }
+// int data = prompt();
+// wordForming(data, wordEndForm(data));
+
+
+//ДЗ_2, Задача_Необязательная_1
+decimal num = Convert.ToDecimal(Console.ReadLine());
+int whole = Convert.ToInt32(Math.Floor(num));
+if (whole < 10) Console.WriteLine("Надо было ввести вещественное число больше 10");
+else
 {
-    Console.WriteLine("Введите положительное количество студентов:");
-    int data = Convert.ToInt32(Console.ReadLine());
-    if (data >= 0) return data;
-    else return prompt();
-}
-string wordEndForm(int num)
-{
-    if (num > 9)
+    int count = 0;
+    int pseudowhole = whole;
+    while ((int)pseudowhole > 0)
     {
-        if (num % 10 == 1) return "";
-        else if (num % 10 >= 2 && num % 10 <= 4) return "а";
-        else return "ов";
+        count++;
+        pseudowhole /= 10;
     }
-    else
+    decimal fraction = num - Math.Floor(num);
+    int firstnum = (whole / Convert.ToInt32(Math.Pow((double)10, (double)(count - 1)))) % 10;
+    string difOfWholeAndFirstnum = Convert.ToString(whole % Convert.ToInt32(Math.Pow((double)10, (double)(count - 2))));
+    if (difOfWholeAndFirstnum == "0")
     {
-        if (num == 1) return "";
-        else if (num >= 2 && num <= 4) return "а";
-        else return "ов";
+        difOfWholeAndFirstnum = "";
     }
+    string firstPart = Convert.ToString(firstnum) + difOfWholeAndFirstnum;
+    decimal result = Convert.ToDecimal(firstPart) + fraction;
+
+    // Console.WriteLine(fraction);
+    // Console.WriteLine(firstnum);
+    // Console.WriteLine(difOfWholeAndFirstnum);
+    // Console.WriteLine(firstPart);
+    Console.WriteLine(result);
 }
-void wordForming(int num, string end)
-{
-    string answer = $"В аудитории {num} студент{end}";
-    Console.WriteLine(answer);
-}
-int data = prompt();
-wordForming(data, wordEndForm(data));
