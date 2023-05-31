@@ -222,32 +222,98 @@
 // wordForming(data, wordEndForm(data));
 
 
-//ДЗ_2, Задача_Необязательная_1
-decimal num = Convert.ToDecimal(Console.ReadLine());
-int whole = Convert.ToInt32(Math.Floor(num));
-if (whole < 10) Console.WriteLine("Надо было ввести вещественное число больше 10");
-else
-{
-    int count = 0;
-    int pseudowhole = whole;
-    while ((int)pseudowhole > 0)
-    {
-        count++;
-        pseudowhole /= 10;
-    }
-    decimal fraction = num - Math.Floor(num);
-    int firstnum = (whole / Convert.ToInt32(Math.Pow((double)10, (double)(count - 1)))) % 10;
-    string difOfWholeAndFirstnum = Convert.ToString(whole % Convert.ToInt32(Math.Pow((double)10, (double)(count - 2))));
-    if (difOfWholeAndFirstnum == "0")
-    {
-        difOfWholeAndFirstnum = "";
-    }
-    string firstPart = Convert.ToString(firstnum) + difOfWholeAndFirstnum;
-    decimal result = Convert.ToDecimal(firstPart) + fraction;
+// //ДЗ_2, Задача_Необязательная_1
+// decimal num = Convert.ToDecimal(Console.ReadLine());
+// int whole = Convert.ToInt32(Math.Floor(num));
+// if (whole < 10) Console.WriteLine("Надо было ввести вещественное число больше 10");
+// else
+// {
+//     int count = 0;
+//     int pseudowhole = whole;
+//     while ((int)pseudowhole > 0)
+//     {
+//         count++;
+//         pseudowhole /= 10;
+//     }
+//     decimal fraction = num - Math.Floor(num);
+//     int firstnum = (whole / Convert.ToInt32(Math.Pow((double)10, (double)(count - 1)))) % 10;
+//     string difOfWholeAndFirstnum = Convert.ToString(whole % Convert.ToInt32(Math.Pow((double)10, (double)(count - 2))));
+//     if (difOfWholeAndFirstnum == "0")
+//     {
+//         difOfWholeAndFirstnum = "";
+//     }
+//     string firstPart = Convert.ToString(firstnum) + difOfWholeAndFirstnum;
+//     decimal result = Convert.ToDecimal(firstPart) + fraction;
 
-    // Console.WriteLine(fraction);
-    // Console.WriteLine(firstnum);
-    // Console.WriteLine(difOfWholeAndFirstnum);
-    // Console.WriteLine(firstPart);
-    Console.WriteLine(result);
-}
+//     // Console.WriteLine(fraction);
+//     // Console.WriteLine(firstnum);
+//     // Console.WriteLine(difOfWholeAndFirstnum);
+//     // Console.WriteLine(firstPart);
+//     Console.WriteLine(result);
+// }
+
+
+
+// // // Семинар 3. Задача 18.
+// void result(int x)
+// {
+//     switch (x)
+//     {
+//         case 1:
+//             Console.WriteLine("х>0, y>0");
+//             break;
+//         case 2:
+//             Console.WriteLine("х<0, y>0");
+//             break;
+//         case 3:
+//             Console.WriteLine("х<0, y<0");
+//             break;
+//         case 4:
+//             Console.WriteLine("х>0, y<0");
+//             break;
+//         default:
+//             Console.WriteLine("Введите диапазон от 1 до 4");
+//             break;
+//     }
+// }
+
+
+
+// Console.WriteLine("Введите номер четверти");
+// int x = Convert.ToInt32(Console.ReadLine());
+// result(x);
+
+
+
+
+
+// // // // Семинар 3. Задача 21.
+// void lineLength(int aX, int aY, int bX, int bY)
+// {
+//     Console.WriteLine(Math.Sqrt(Math.Pow(bX - aX, 2) + Math.Pow(bY - aY, 2)));
+// }
+
+// Console.WriteLine("Введите координату x точки А:");
+// int aX = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату y точки А:");
+// int aY = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату x точки B:");
+// int bX = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите координату y точки B:");
+// int bY = Convert.ToInt32(Console.ReadLine());
+
+// lineLength(aX, aY, bX, bY);
+
+
+
+
+// Семинар 3. Задача 22.
+// void nums(int x)
+// {
+//     for (int i = 1; i <= x; i++)
+//         Console.WriteLine(Math.Pow(i, 2));
+// }
+// Console.WriteLine("Введите число:");
+// int x = Convert.ToInt32(Console.ReadLine());
+// nums(x);
+
