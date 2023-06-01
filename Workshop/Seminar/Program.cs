@@ -317,3 +317,51 @@
 // int x = Convert.ToInt32(Console.ReadLine());
 // nums(x);
 
+
+// // Семинар 4. Задача 22.
+// Console.WriteLine("Введите число:");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int countOfNums(int num)
+// {
+//     int count = 0;
+//     for (int i = num; i > 1; i /= 10)
+//     {
+//         count++;
+
+//     }
+//     return count;
+// }
+
+// Console.WriteLine($"Количество цифр: {countOfNums(num)}");
+
+
+
+
+// // Семинар 4. Задача 28.
+
+// Console.WriteLine("Введите число:");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// int multiply(int num)
+// {
+//     int result = 1;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         result *= i;
+//     }
+//     return result;
+// }
+
+// Console.WriteLine($"Результат перемножения всех составляющих цифр числа: {multiply(num)}");
+
+
+// // Семинар 4. Задача 30.
+// int[] array01 = new int[8];
+// int ran = 0;
+// for (int i = 0; i < array01.Length; i++)
+// {
+//     ran = new Random().Next(0, 2);
+//     array01[i] = ran;
+//     Console.Write($"{array01[i]}");
+// }
