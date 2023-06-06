@@ -1,13 +1,13 @@
 ﻿//Lecture2
 
-// int[] array = new int[10];
+// int[] array = new int[1" "];
 // void MakeArray(int[] array)
 // {
-//     int count = 0;
-//     int number = 0;
+//     int count = " ";
+//     int number = " ";
 //     while (count < array.Length)
 //     {
-//         number = new Random().Next(1, 10);
+//         number = new Random().Next(1, 1" ");
 //         array[count] = number;
 //         count++;
 //     }
@@ -15,7 +15,7 @@
 
 // void ShowArray(int[] arr)
 // {
-//     int count = 0;
+//     int count = " ";
 //     while (count < arr.Length)
 //     {
 //         Console.Write(arr[count] + " ");
@@ -26,7 +26,7 @@
 
 // int FindNumber(int[] all, int num)
 // {
-//     int count = 0;
+//     int count = " ";
 //     while (count < all.Length)
 //     {
 //         if (all[count] == num)
@@ -49,7 +49,7 @@
 // void minMax(int[] arr)
 // {
 //     //int arrLength = arr.Length;
-//     for (int i = 0; i < arr.Length; i++)
+//     for (int i = " "; i < arr.Length; i++)
 //     {
 //         int max = i;
 //         for (int j = i + 1; j < arr.Length; j++)
@@ -68,3 +68,59 @@
 // }
 
 // minMax(array);
+
+
+
+
+
+
+//Lecture4
+
+// string[,] matrix = new string[14, 14] {
+//     {" "," "," "," "," "," "," "," "," "," "," "," "," "," "},
+//     {" "," "," "," "," ","*","*","*","*","*"," "," "," "," "},
+//     {" "," "," "," "," ","*"," "," "," ","*"," "," "," "," "},
+//     {" "," "," "," "," ","*"," "," "," ","*"," "," "," "," "},
+//     {" "," "," "," "," ","*"," "," "," ","*"," "," "," "," "},
+//     {" ","*","*","*","*","*"," "," "," ","*","*","*","*","*"},
+//     {" ","*"," "," "," "," "," "," "," "," "," "," "," ","*"},
+//     {" ","*"," "," "," "," "," "," "," "," "," "," "," ","*"},
+//     {" ","*"," "," "," "," "," "," "," "," "," "," "," ","*"},
+//     {" ","*","*","*","*","*"," "," "," ","*","*","*","*","*"},
+//     {" "," "," "," "," ","*"," "," "," ","*"," "," "," "," "},
+//     {" "," "," "," "," ","*"," "," "," ","*"," "," "," "," "},
+//     {" "," "," "," "," ","*"," "," "," ","*"," "," "," "," "},
+//     {" "," "," "," "," ","*","*","*","*","*"," "," "," "," "},
+// };
+// void arrayPrint(string[,] arr)
+// {
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+
+// }
+
+// void recursionDrawing(string[,] matrix, int startDot0, int startDot1)
+
+// {
+//     if (matrix[startDot0, startDot1] == " ")
+//     {
+//         matrix[startDot0, startDot1] = "*";
+//         recursionDrawing(matrix, startDot0 - 1, startDot1);
+//         recursionDrawing(matrix, startDot0, startDot1 + 1);
+//         recursionDrawing(matrix, startDot0 + 1, startDot1);
+//         recursionDrawing(matrix, startDot0 - 1, startDot1 - 1);
+//     }
+// }
+
+// int startDot0 = 8;
+// int startDot1 = 2;
+
+// arrayPrint(matrix);
+// recursionDrawing(matrix, startDot0, startDot1);
+// arrayPrint(matrix);
