@@ -8,6 +8,7 @@
 Console.WriteLine("Введите количество элементов массива:");
 int numOfArrItems = Convert.ToInt32(Console.ReadLine());
 int[] myArr = new int[numOfArrItems];
+int[] newArr = new int[5];
 
 void ArrayGen(int[] geningArr)
 {
@@ -28,10 +29,7 @@ void Print(int[] printingArray)
 
 void FindExtrem(int[] arr)
 {
-    int[] newArr = new int[5];
-    int max = 0;
     int maxIndex = 0;
-    int min = 0;
     int minIndex = 0;
     int middleSum = 0;
     int sum = arr[0];
@@ -41,6 +39,13 @@ void FindExtrem(int[] arr)
         if (arr[i] < arr[minIndex]) minIndex = i;
         sum += arr[i];
     }
+
+    newArr[0] = arr[maxIndex];
+    newArr[1] = maxIndex;
+    newArr[2] = arr[minIndex];
+    newArr[3] = minIndex;
+    newArr[4] = sum / arr.Length;
+
     Console.WriteLine($"Максимальный элемент: {arr[maxIndex]}, его индекс: {maxIndex}");
     Console.WriteLine($"Минимальный элемент: {arr[minIndex]}, его индекс: {minIndex}");
     Console.WriteLine($"Среднее арифметическое элементов массива: {sum / arr.Length}");
@@ -74,4 +79,5 @@ void MedianaArr(int[] arr)
 ArrayGen(myArr);
 Print(myArr);
 FindExtrem(myArr);
+Print(newArr);
 MedianaArr(myArr);

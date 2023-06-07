@@ -49,7 +49,7 @@
 // void minMax(int[] arr)
 // {
 //     //int arrLength = arr.Length;
-//     for (int i = " "; i < arr.Length; i++)
+//     for (int i = 0; i < arr.Length; i++)
 //     {
 //         int max = i;
 //         for (int j = i + 1; j < arr.Length; j++)
@@ -124,3 +124,5 @@
 // arrayPrint(matrix);
 // recursionDrawing(matrix, startDot0, startDot1);
 // arrayPrint(matrix);
+
+
