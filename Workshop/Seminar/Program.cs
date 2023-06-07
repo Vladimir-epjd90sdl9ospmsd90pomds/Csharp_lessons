@@ -365,3 +365,148 @@
 //     array01[i] = ran;
 //     Console.Write($"{array01[i]}");
 // }
+
+
+
+// // Семинар 4. Задача 32.
+
+// int[] arr = new int[4] { -4, -8, 8, 2 };
+// void Changing(int[] changingArray)
+// {
+//     int[] result = new int[changingArray.Length];
+//     int i = 0;
+//     foreach (int item in changingArray)
+//     {
+//         result[i] = -1 * item;
+//         i++;
+//     }
+//     arr = result;
+// }
+// void Print(int[] printingArray)
+// {
+//     foreach (int item in printingArray)
+//     {
+//         Console.Write($"{item} ");
+//     }
+// }
+// Changing(arr);
+// Print(arr);
+
+
+
+// int[] arr = new int[5] { 6, 7, 19, 345, 3 };
+// int num = 6;
+// void Finding(int[] findingNum)
+// {
+//     bool yn = false;
+//     foreach (int item in findingNum)
+//     {
+//         if (item == num) yn = true;
+//         break;
+//     }
+
+
+//     if (yn) Console.WriteLine("Да");
+//     else Console.WriteLine("Нет");
+// }
+
+// Finding(arr);
+
+
+
+
+
+// // Семинар 4. Задача 35.
+
+// Console.WriteLine("Введите количество элементов массива:");
+// int numOfArrItems = Convert.ToInt32(Console.ReadLine());
+
+
+
+// int[] ArrayGen(int num)
+// {
+//     int[] newArr = new int[num];
+//     for (int i = 0; i < newArr.Length; i++)
+//     {
+//         newArr[i] = new Random().Next(0, 123);
+//     }
+//     return newArr;
+// }
+
+// void Print(int[] printingArray)
+// {
+//     foreach (int item in printingArray)
+//     {
+//         Console.Write($"{item} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void ArrFilter(int[] arrayForFiltering)
+// {
+//     int filteredResult = 0;
+//     foreach (int item in arrayForFiltering)
+//     {
+//         if (item >= 10 && item <= 99) filteredResult++;
+//     }
+//     Console.WriteLine(filteredResult);
+// }
+
+// int[] result = ArrayGen(numOfArrItems);
+// Print(result);
+// ArrFilter(result);
+
+
+
+
+// // Семинар 4. Задача 37.
+// Console.WriteLine("Введите количество элементов массива:");
+// int numOfArrItems = Convert.ToInt32(Console.ReadLine());
+// int[] myArr = new int[numOfArrItems];
+
+// void ArrayGen(int[] geningArr)
+// {
+//     for (int i = 0; i < geningArr.Length; i++)
+//     {
+//         geningArr[i] = new Random().Next(1, 11);
+//     }
+// }
+
+// void Print(int[] printingArray)
+// {
+//     foreach (int item in printingArray)
+//     {
+//         Console.Write($"{item} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void SummOf(int[] multingArray)
+// {
+//     int resultLength = 0;
+//     if (multingArray.Length % 2 > 0) resultLength = (multingArray.Length / 2) + 1;
+//     else resultLength = multingArray.Length / 2;
+//     int[] result = new int[resultLength];
+//     int j = 0;
+//     for (int i = 0; i < multingArray.Length; i++)
+//     {
+//         j = multingArray.Length - i - 1;
+//         if (i - j == 0)
+//         {
+//             result[i] = multingArray[i];
+//             break;
+//         }
+//         else if (j - i == 1)
+//         {
+//             result[i] = multingArray[i] * multingArray[j];
+//             break;
+//         }
+//         else result[i] = multingArray[i] * multingArray[j];
+
+//     }
+//     Console.WriteLine(result.Length);
+//     Print(result);
+// }
+// ArrayGen(myArr);
+// Print(myArr);
+// SummOf(myArr);
