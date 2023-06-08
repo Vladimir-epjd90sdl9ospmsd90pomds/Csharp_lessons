@@ -510,3 +510,120 @@
 // ArrayGen(myArr);
 // Print(myArr);
 // SummOf(myArr);
+
+
+
+
+
+
+// Семинар 5. Задача 40. 
+
+// void Triangle(int length_1, int length_2, int length_3)
+// {
+//     if (length_1 < length_2 + length_3 && length_2 < length_1 + length_3 && length_3 < length_1 + length_2)
+//         Console.WriteLine("Да, такой треугольник может существовать");
+//     else Console.WriteLine("Нет, такого треугольника не может существовать");
+// }
+
+// Console.WriteLine("Введите длину 1й стороны: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите длину 2й стороны: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите длину 3й стороны: ");
+// int z = Convert.ToInt32(Console.ReadLine());
+// Triangle(x, y, z);
+
+
+
+
+
+// // Семинар 5. Задача 42. // Конвертит десятичные в двоичные, через массив
+// Console.WriteLine("Введите число: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int arrLength = MakeArrayLength(num);
+// int[] result = new int[arrLength];
+// int i = 0;
+
+// int MakeArrayLength(int num1)
+// {
+//     int k = 0;
+//     for (int j = num1; j >= 1; j /= 2)
+//     {
+//         k++;
+//     }
+//     return k;
+// }
+
+// void ToBi(int num2, int i)
+// {
+//     if (num2 >= 1)
+//     {
+//         result[i] = num2 % 2;
+//         num2 /= 2;
+//         i++;
+//         ToBi(num2, i);
+//     }
+// }
+
+// void Moving(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length / 2; i++)
+//     {
+//         (arr[i], arr[arr.Length - 1 - i]) = (arr[arr.Length - 1 - i], arr[i]);
+//     }
+// }
+
+// void Print(int[] printingArray)
+// {
+//     foreach (int item in printingArray)
+//     {
+//         Console.Write($"{item} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// //Print(result);
+// ToBi(num, i);
+// Moving(result);
+// Print(result);
+
+
+// //Семинар 5. Задача 44.
+// Console.WriteLine("Введите количество числ Фибоначи: ");
+// int num = Convert.ToInt32(Console.ReadLine());
+// int[] fibonachiArr = new int[num];
+// fibonachiArr[0] = 0;
+// fibonachiArr[1] = 1;
+
+// void Fibonaci(int num)
+// {
+//     for (int i = 2; i < num; i++)
+//     {
+//         fibonachiArr[i] = fibonachiArr[i - 1] + fibonachiArr[i - 2];
+//     }
+// }
+
+// void NegaFibonaci(int[] myarr)
+// {
+//     int[] result = new int[myarr.Length * 2 - 1];
+//     for (int i = 0; i < myarr.Length * 2 - 1; i++)
+//     {
+//         if (i < myarr.Length && i % 2 == 0) result[i] = myarr[myarr.Length - 1 - i] * -1;
+//         else if (i < myarr.Length && i % 2 != 0) result[i] = myarr[myarr.Length - 1 - i];
+//         else result[i] = myarr[i + 1 - myarr.Length];
+//     }
+//     Print(result);
+// }
+
+// void Print(int[] printingArray)
+// {
+//     foreach (int item in printingArray)
+//     {
+//         Console.Write($"{item} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// Fibonaci(num);
+// Print(fibonachiArr);
+// NegaFibonaci(fibonachiArr);

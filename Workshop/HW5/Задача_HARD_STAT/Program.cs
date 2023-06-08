@@ -31,7 +31,6 @@ void FindExtrem(int[] arr)
 {
     int maxIndex = 0;
     int minIndex = 0;
-    int middleSum = 0;
     int sum = arr[0];
     for (int i = 1; i < arr.Length; i++)
     {
