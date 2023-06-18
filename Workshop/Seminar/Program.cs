@@ -934,3 +934,129 @@
 // Print2D(resultArrow);
 // ArrowSorting(resultArrow);
 // Print2D(resultArrow);
+
+
+
+// //Семинар 7. Задача 53
+
+// int[,] GenArrow(int rowQuantity, int colQuentity)
+// {
+//     int[,] tempArrow = new int[rowQuantity, colQuentity];
+//     for (int i = 0; i < tempArrow.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < tempArrow.GetLength(1); j++)
+//         {
+//             tempArrow[i, j] = new Random().Next(0, 64);
+//         }
+//     }
+//     return tempArrow;
+// }
+
+// void ArrowSorting(int[,] arrForScan)
+// {
+//     int[] tempArrow = new int[arrForScan.GetLength(1)];
+//     for (int i = 0; i < tempArrow.Length; i++)
+//     {
+//         tempArrow[i] = arrForScan[0, i];
+//         arrForScan[0, i] = arrForScan[arrForScan.GetLength(0) - 1, i];
+//         arrForScan[arrForScan.GetLength(0) - 1, i] = tempArrow[i];
+//     }
+// }
+
+// void Print2D(int[,] printingArray)
+// {
+//     for (int i = 0; i < printingArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < printingArray.GetLength(1); j++)
+//         {
+//             Console.Write($"{printingArray[i, j],4}");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+
+// Console.WriteLine("Введите кол-во строк:");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите кол-во столбцов:");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] resultArrow = GenArrow(rows, columns);
+// Print2D(resultArrow);
+// ArrowSorting(resultArrow);
+// Print2D(resultArrow);
+
+
+
+
+// //Семинар 7. Задача 55
+
+// int[,] GenArrow(int rowQuantity, int colQuentity)
+// {
+//     int[,] tempArrow = new int[rowQuantity, colQuentity];
+//     for (int i = 0; i < tempArrow.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < tempArrow.GetLength(1); j++)
+//         {
+//             tempArrow[i, j] = new Random().Next(0, 64);
+//         }
+//     }
+//     return tempArrow;
+// }
+
+// int[,] ArrowSorting(int[,] arrForSort)
+// {
+//     int[,] tempArrow = new int[arrForSort.GetLength(0), arrForSort.GetLength(1)];
+//     for (int i = 0; i < arrForSort.GetLength(0); i++)
+//     {
+//         for (int j = 0; j <= i; j++)
+//         {
+//             tempArrow[i, j] = arrForSort[j, i];
+//             tempArrow[j, i] = arrForSort[i, j];
+//         }
+//     }
+//     return tempArrow;
+// }
+
+// void Print2D(int[,] printingArray)
+// {
+//     for (int i = 0; i < printingArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < printingArray.GetLength(1); j++)
+//         {
+//             Console.Write($"{printingArray[i, j],4}");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// int[] RightRowAndCol()
+// {
+//     int[] tempArrow2 = new int[2];
+//     Console.WriteLine("Введите кол-во строк:");
+//     int rows = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine("Введите кол-во столбцов:");
+//     int columns = Convert.ToInt32(Console.ReadLine());
+//     if (rows == columns)
+//     {
+//         tempArrow2[0] = rows;
+//         tempArrow2[1] = columns;
+//         return tempArrow2;
+
+//     }
+//     else
+//     {
+//         Console.WriteLine("Количество строк и столбцов должно совпадать:");
+//         return RightRowAndCol();
+//     }
+// }
+
+
+
+// int[] rowsAndCols = RightRowAndCol();
+// int[,] generedArrow = GenArrow(rowsAndCols[0], rowsAndCols[1]);
+// int[,] resultArrow = ArrowSorting(generedArrow); ;
+// Print2D(generedArrow);
+// Print2D(resultArrow);

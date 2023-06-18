@@ -8,70 +8,6 @@
 // 26(1,0,1) 55(1,1,1)
 
 
-int[,] GenArrow(int arr0, int arr1)
-{
-    int[,] tempArray = new int[arr0, arr1];
-    for (int i = 0; i < tempArray.GetLength(0); i++)
-    {
-        for (int j = 0; j < tempArray.GetLength(1); j++)
-        {
-            void unicTest(int i, int j)
-            {
-                tempArray[i, j] = new Random().Next(0, 10);
-                for (int k = 0; k <= i; k++)
-                {
-                    if (k == i)
-                    {
-                        for (int l = 0; l < j; l++)
-                        {
-                            if (tempArray[k, l] == tempArray[i, j]) unicTest(i, j);
-                        }
-                    }
-                    else
-                    {
-                        for (int l = 0; l < tempArray.GetLength(1); l++)
-                        {
-                            if (tempArray[k, l] == tempArray[i, j]) unicTest(i, j);
-                        }
-                    }
-                }
-
-            }
-            unicTest(i, j);
-        }
-    }
-
-    // for (int i = 0; i < tempArray.GetLength(0); i++)
-    // {
-    //     for (int j = 0; j < tempArray.GetLength(1); j++)
-    //     {
-    //         for (int k = 0; k < tempArray.GetLength(2); k++)
-    //         {
-    //             int unicTest(int i, int j, int k, int[,,] tempArray)
-    //             {
-    //                 int tempArray2 = new Random().Next(1, 10);
-    //                 for (int l = 0; l < i + 1; l++)
-    //                 {
-    //                     for (int m = 0; m < j + 1; m++)
-    //                     {
-    //                         for (int n = 0; n < k; n++)
-    //                         {
-    //                             if (tempArray[l, m, n] == tempArray2) unicTest(i, j, k, tempArray);
-    //                             else return tempArray2;
-    //                             //tempArray[i, j, k] = tempArray2;
-    //                         }
-    //                     }
-    //                 }
-    //                 // tempArray[i, j, k] = tempArray2;
-    //             }
-
-    //             tempArray[i, j, k] = unicTest(i, j, k, tempArray);
-    //         }
-    //     }
-    // }
-    return tempArray;
-}
-
 void Print3D(int[,,] printingArray)
 {
     for (int i = 0; i < printingArray.GetLength(2); i++)
@@ -89,26 +25,158 @@ void Print3D(int[,,] printingArray)
 
 }
 
-void Print2D(int[,] printingArray)
+// void Print1D(int[] printingArray)
+// {
+//     foreach (int item in printingArray)
+//     {
+//         Console.Write($"{item} ");
+//     }
+//     Console.WriteLine();
+// }
+
+// void Print2D(int[,] printingArray)
+// {
+//     for (int i = 0; i < printingArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < printingArray.GetLength(1); j++)
+//         {
+//             Console.Write($"{printingArray[i, j],4}");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// void Print3D(int[,,] printingArray)
+// {
+//     for (int i = 0; i < printingArray.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < printingArray.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < printingArray.GetLength(2); k++)
+//             {
+//                 Console.Write($"{printingArray[i, j, k],5} ({i}, {j}, {k})");
+//             }
+//             Console.WriteLine();
+//         }
+//     }
+// }
+
+// void Make1DNoRepeatsArray(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         int CheckPositions()
+//         {
+//             int tempNum = new Random().Next(0, 20);
+//             for (int j = 0; j < i; j++)
+//             {
+//                 if (arr[j] == tempNum)
+//                 {
+//                     tempNum = CheckPositions();
+//                 }
+//             }
+//             return tempNum;
+//         }
+//         CheckPositions();
+//         arr[i] = CheckPositions();
+//     }
+// }
+
+// void Make2DNoRepeatsArray(int[,] arr)
+// {
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int k = 0; k < arr.GetLength(1); k++)
+//         {
+//             int CheckPositions()
+//             {
+//                 int tempNum = new Random().Next(0, 25);
+//                 for (int j = 0; j <= i; j++)
+//                 {
+//                     if (j != i)
+//                     {
+//                         for (int l = 0; l < arr.GetLength(1); l++)
+//                         {
+//                             if (arr[j, l] == tempNum)
+//                             {
+//                                 return tempNum = CheckPositions();
+//                             }
+
+//                         }
+//                     }
+//                     else if (j == i)
+//                     {
+//                         for (int l = 0; l < k; l++)
+//                         {
+//                             if (arr[j, l] == tempNum)
+//                             {
+//                                 return tempNum = CheckPositions();
+//                             }
+
+//                         }
+//                     }
+//                 }
+//                 return tempNum;
+//             }
+//             CheckPositions();
+//             arr[i, k] = CheckPositions();
+//         }
+//     }
+// }
+
+void Make3DNoRepeatsArray(int[,,] arr)
 {
-    for (int i = 0; i < printingArray.GetLength(0); i++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        for (int j = 0; j < printingArray.GetLength(1); j++)
+        for (int m = 0; m < arr.GetLength(1); m++)
         {
-            Console.Write($"{printingArray[i, j],4}");
+            for (int k = 0; k < arr.GetLength(2); k++)
+            {
+                int CheckPositions()
+                {
+                    int tempNum = new Random().Next(0, 100);
+                    for (int j = 0; j < arr.GetLength(0); j++)
+                    {
+                        for (int n = 0; n < arr.GetLength(1); n++)
+                        {
+                            for (int l = 0; l < arr.GetLength(2); l++)
+                            {
+                                if (arr[j, n, l] == tempNum)
+                                {
+                                    return tempNum = CheckPositions();
+                                }
+                            }
+                        }
+                    }
+                    return tempNum;
+                }
+                //CheckPositions();
+                arr[i, m, k] = CheckPositions();
+            }
         }
-        Console.WriteLine();
     }
-    Console.WriteLine();
 }
 
 
-Console.WriteLine("Введите кол-во эл-тов 1го измерения:");
-int arr0 = 4;//Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите кол-во эл-тов 2го измерения:");
+
+
+//Console.WriteLine("Введите кол-во эл-тов 1го измерения:");
+int arr0 = 2;//Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Введите кол-во эл-тов 2го измерения:");
 int arr1 = 2;//Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите кол-во эл-тов 3го измерения:");
+//Console.WriteLine("Введите кол-во эл-тов 3го измерения:");
 int arr2 = 2;//Convert.ToInt32(Console.ReadLine());
 
-int[,] resultArrow = GenArrow(arr0, arr1);
-Print2D(resultArrow);
+//int[] arr1D = new int[arr0];
+//Make1DNoRepeatsArray(arr1D);
+//Print1D(arr1D);
+
+// int[,] arr2D = new int[arr0, arr1];
+// Make2DNoRepeatsArray(arr2D);
+// Print2D(arr2D);
+
+int[,,] arr3D = new int[arr0, arr1, arr2];
+Make3DNoRepeatsArray(arr3D);
+Print3D(arr3D);
+
