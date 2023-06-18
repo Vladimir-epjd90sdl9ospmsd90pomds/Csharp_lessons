@@ -38,7 +38,7 @@ void FindingMinRow(int[,] arrForScan)
         }
 
         if (i == 0) minSum = sum;
-        Console.WriteLine(sum);
+        //Console.WriteLine(sum);
 
         if (sum < minSum)
         {
@@ -46,7 +46,7 @@ void FindingMinRow(int[,] arrForScan)
             num = i;
         }
     }
-    Console.WriteLine($"Строка с наименьшей суммой элементов:{num}");
+    Console.WriteLine($"Строка с наименьшей суммой элементов:{num + 1}");
 
 
 }

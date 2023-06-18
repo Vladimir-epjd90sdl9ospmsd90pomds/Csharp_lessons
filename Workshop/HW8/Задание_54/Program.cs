@@ -32,7 +32,7 @@ void ArrowSorting(int[,] arrForScan)
         {
             for (int k = j + 1; k < arrForScan.GetLength(1); k++)
             {
-                if (arrForScan[i, k] < arrForScan[i, j])
+                if (arrForScan[i, k] > arrForScan[i, j])
                 {
                     temp = arrForScan[i, j];
                     arrForScan[i, j] = arrForScan[i, k];
