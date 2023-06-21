@@ -1060,3 +1060,78 @@
 // int[,] resultArrow = ArrowSorting(generedArrow); ;
 // Print2D(generedArrow);
 // Print2D(resultArrow);
+
+
+
+
+// Семинар 9.
+// int SumByRecurse(int n)
+// {
+//     if (n == 0) return 0;
+//     else return n + SumByRecurse(n - 1);
+// }
+
+// Console.WriteLine(SumByRecurse(15));
+
+
+// Задача 63
+
+// string PrintAllNumsRecurse(int n)
+// {
+//     if (n == 1) return "1";
+//     return PrintAllNumsRecurse(n - 1) + n;
+// }
+// Console.Write(PrintAllNumsRecurse(5));
+
+
+
+
+// Задача 65
+
+// string PrintRange(int num1, int num2)
+// {
+//     if (num1 == num2) return Convert.ToString(num2);
+//     else return num1 + PrintRange(num1 + 1, num2);
+// }
+
+// Console.WriteLine("Введите 1е число:");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите 2е число:");
+// int num2 = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write(PrintRange(num1, num2));
+
+
+
+
+
+// Задача 67
+
+// int SummOfNums(int num)
+// {
+//     if (num / 10 < 1) return num;
+//     else return num % 10 + SummOfNums(num / 10);
+// }
+
+// Console.WriteLine("Введите число:");
+// int num = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(SummOfNums(num));
+
+
+
+
+// Задача 67
+
+// int AStepenB(int A, int B)
+// {
+//     B--;
+//     if (B == 0) return A;
+//     else return A * AStepenB(A, B);
+// }
+
+// Console.WriteLine("Введите число A:");
+// int numA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число B:");
+// int numB = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write(AStepenB(numA, numB));

@@ -63,14 +63,14 @@ int[] RightMatrixComb()
     }
 }
 
-void Print1D(int[] printingArray)
-{
-    foreach (int item in printingArray)
-    {
-        Console.Write($"{item} ");
-    }
-    Console.WriteLine();
-}
+// void Print1D(int[] printingArray)
+// {
+//     foreach (int item in printingArray)
+//     {
+//         Console.Write($"{item} ");
+//     }
+//     Console.WriteLine();
+// }
 
 void MultiplyMatrix(int[,] array1, int[,] array2, int[,] multiArr)
 {

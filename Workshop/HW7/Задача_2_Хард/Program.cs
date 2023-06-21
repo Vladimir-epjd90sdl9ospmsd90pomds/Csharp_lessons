@@ -105,14 +105,14 @@ int[] GenCoordsArray(int[,] arrForMod)
     return usedCoords2;
 }
 
-void Print1D(int[] printingArray)
-{
-    foreach (int item in printingArray)
-    {
-        Console.Write($"{item} ");
-    }
-    Console.WriteLine();
-}
+// void Print1D(int[] printingArray)
+// {
+//     foreach (int item in printingArray)
+//     {
+//         Console.Write($"{item} ");
+//     }
+//     Console.WriteLine();
+// }
 
 void ChangePlaces(int[,] mainArrow, int[] coordCombinations)
 {
